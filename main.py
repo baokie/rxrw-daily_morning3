@@ -158,6 +158,32 @@ data = {
     "value": get_words(),
     "color": get_random_color()
   },
+  
+  "nongli": {
+    "value": nongli['yearTips'] + '年 ' + nongli['lunarCalendar'],
+    "color": get_random_color()
+  },
+  "nongliyi": {
+    "value": nongli['suit'],
+    "color": get_random_color()
+  },
+  "nongliji": {
+    "value": nongli['avoid'],
+    "color": get_random_color()
+  },
+  "nonglijieqi": {
+    "value": nongli['solarTerms'],
+    "color": get_random_color()
+  },
+  "dayth": {
+    "value": nongli['dayOfYear'],
+    "color": get_random_color()
+  },
+  "weekth": {
+    "value": nongli['weekOfYear'],
+    "color": get_random_color()
+  },
+  
 }
 
 if __name__ == '__main__':
