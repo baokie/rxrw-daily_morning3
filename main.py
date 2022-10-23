@@ -81,6 +81,15 @@ def format_temperature(temperature):
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
+# nongli 直接返回对象，在使用的地方用字段进行调用。
+def get_nongli():
+  url2 = "https://www.mxnzp.com/api/holiday/single/" + today.strftime('%Y%m%d') + "?ignoreHoliday=false&app_id=unrbtuo7rkkiq9ic&app_secret=SWNoR2Q4MXRUWnIvNk5zYWdkVDlidz09"
+  res2 = requests.get(url2).json()
+  if res2 is None:
+    return None
+  nongli = res2['data']
+  return nongli
+
 try:
   client = WeChatClient(app_id, app_secret)
 except WeChatClientException as e:
